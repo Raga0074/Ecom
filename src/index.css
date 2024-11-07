@@ -10,6 +10,15 @@
 /*Style used for the sigin button used in the app*/
 .button{
     @apply
-    text-black uppercase text-xs sm:text-sm m-2 py-1 ml-[85%] sm:ml-[95%] w-14 sm:w-16 rounded-md text-center  
+    text-black uppercase text-xs sm:text-sm m-2 py-1 ml-[15%] sm:ml-[30%] w-14 sm:w-16 rounded-md text-center  
 }
 
+
+   #cart{
+        font-family: sans-serif;
+        text-align: center;
+        border: 2px solid black;
+        height: 300px;
+        width: 500px;
+        margin: auto;
+   }

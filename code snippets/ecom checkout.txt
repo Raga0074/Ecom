@@ -1,0 +1,49 @@
+checkout process for the ecom store
+
+import { createClient } from "@supabase/supabase-js"; // Import Supabase client
+
+import { useClerk } from "clerk"; // Import Clerk hook
+
+
+
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY); // Initialize Supabase
+
+
+
+function Checkout() {
+
+    const { user } = useClerk(); // Get current Clerk user
+
+
+
+    const handlePlaceOrder = async () => {
+
+        const { data: orderData, error } = await supabase
+
+            .from("orders")
+
+            .insert([
+
+                { 
+
+                    user_id: user.id, // Use Clerk user ID
+
+                    products: [...], // Array of product details
+
+                    total_price: 100 // Example total price
+
+                }
+
+            ]);
+
+
+
+        // Handle success or error
+
+    };
+
+
+
+    // ... rest of your checkout component
+
+}
